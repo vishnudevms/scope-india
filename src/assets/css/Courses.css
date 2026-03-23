@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+#container_page_intro {
+    text-align: center;
+    background-color: #fff;
+}
+#container_page_intro #container_google_star1 {
+    display: none;
+}
+#container_page_intro h1 {
+    font-family: Viga;
+    color: #eeaf10;
+    font-size: 35px;
+    background: linear-gradient(60deg, #04145f 0%, rgb(4 13 55) 100%);
+    padding: 7px 15px;
+    display: block;
+    margin: -35px 0px 0px 0px;
+    font-weight: normal;
+    border-top: 1.5px solid #c7ac20;
+    border-bottom: 1.5px solid #c7ac20;
+}
+#container_page_intro h2 {
+    font-family: Viga;
+    color: #14267c;
+    font-size: 180%;
+    display: block;
+    margin: 15px auto;
+    font-weight: normal;
+    padding: 0px 10px 0px 10px;
+}
+#container_page_intro h3 {
+    font-family: Viga;
+    color: #0b27a8;
+    font-size: 120%;
+    font-weight: normal;
+    text-align: justify;
+    padding: 15px;
+    margin-top: -21px;
+    margin-bottom: 0px;
+}
+#container_page_intro div {
+    margin: 30px 0 0 0;
+    background: linear-gradient(45deg, #e2e2e2, #fff);
+}
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: "Viga", sans-serif;
+    margin: 0 auto;
+    font-size: 14px;
+}
+#course_header {
+    text-align: center;
+    background-color: #fdd51c;
+    margin: 0 auto;
+}
+#course_header > h2 {
+    font-size: 190%;
+    color: #04145f;
+    margin: 0;
+    font-weight: normal;
+    padding: 5px;
+    border-top: 5px solid #c7ac20;
+}
+#course_head_container {
+    display: grid;
+    gap: 3px;
+    background-color: #04145f;
+    padding: 10px 5px 35px 5px;
+    grid-template-columns: 33% 33% 33%;
+}
+#course_head_container > a {
+    /* background-color: #fff9dc; */
+    color: #14267c;
+    text-align: left;
+    padding: 20px 35px 20px 20px;
+    font-size: 150%;
+    border-radius: 10px;
+    margin: 10px 5px;
+    font-weight: 400;
+    border: 2px solid #c7ac20;
+    text-decoration: none;
+    background: white url("/images/right-arrow.png") no-repeat;
+    background-size: 20px 33px;
+    background-position: 95%;
+}
+#course_head_container > a h3 {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+#course_head_container > a:hover {
+	color: #092bcd;
+	background: #fff9dc url("/images/right-arrow-gold.png") no-repeat;
+	background-size: 20px 33px;
+	background-position: 95%;
+}
+
+@media screen and (max-width: 900px) {
+    #course_head_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #course_head_container {
+        grid-template-columns: 1fr;
+    }
+    #container_page_intro h1 {
+        font-size: 24px;
+        margin-top: -20px;
+    }
+    #container_page_intro h2 {
+        font-size: 130%;
+    }
+    #container_page_intro h3 {
+        font-size: 100%;
+        padding: 10px;
+    }
+}

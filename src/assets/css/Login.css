@@ -1,0 +1,76 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+  font-family: inherit;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+}
+.modal-content label {
+  display: block;
+  margin: 12px 0 4px 0;
+  color: #333;
+  font-weight: 500;
+}
+.modal-content input[type="text"],.modal-content input[type="email"],.modal-content input[type="password"] {
+  width: 100% !important;
+  padding: 8px 10px;
+  border: 1px solid #04145f !important;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.login-btn {
+  width: 100%;
+  background: #04145f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: #0829b8;
+}
+.Toastify__toast--success .Toastify__toast-icon,
+.Toastify__toast--success svg {
+  fill: #04145f !important;
+}
+.Toastify__toast--success .Toastify__progress-bar {
+  background: #04145f !important;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+}
+.checkbox-row label {
+  margin: 0 0 0 8px;
+  vertical-align: middle;
+  font-size: 1rem;
+  line-height: 1.2;
+}

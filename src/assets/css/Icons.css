@@ -1,0 +1,46 @@
+#up_button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #007bff;
+	color: white;
+	padding: 7px;
+	border-radius: 8px;
+	cursor: pointer;
+	display: none; 
+	z-index: 3;
+	width: 35px;
+    height: 35px;
+}
+#up_button:hover {
+	background-color: #0056b3;
+}
+#up_button svg{
+    margin-left: -2px;
+    margin-top: -2px;
+}
+#call_float_icons {
+    z-index: 2;
+    position: fixed;
+    float: right;
+    display: inline-grid;
+    margin: 0 auto;
+    right: 5px;
+    top: 3px;
+}
+#call_float_icons img {
+    width: 45px;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+#mobile_menu_button {
+    cursor: pointer;
+    display: none;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    padding: 4px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgb(219 81 82) 15%, rgb(5 33 173) 86%);
+}
