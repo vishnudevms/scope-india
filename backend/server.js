@@ -43,13 +43,13 @@ app.post('/api/register', async (req, res) => {
   let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: process.env.EMAIL_USER || 'vishnu.dev0970@gmail.com',
-          pass: process.env.EMAIL_PASS || 'jllz vtgc fjpg puvw'
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
       }
   });
 
   let mailOptions = {
-      from: 'vishnu.dev0970@gmail.com',
+      from: process.env.EMAIL_USER,
       to: reg_email,
       subject: 'Registration Successful',
       text: `Hello ${reg_full_name},\n\nThank you for registering at SCOPE INDIA!`
@@ -79,13 +79,13 @@ app.post('/api/send-otp', async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER || 'vishnu.dev0970@gmail.com',
-      pass: process.env.EMAIL_PASS || 'jllz vtgc fjpg puvw'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
     }
   });
 
   let mailOptions = {
-    from: 'vishnu.dev0970@gmail.com',
+    from: process.env.EMAIL_USER,
     to: email,
     subject: 'Your OTP Code',
     text: `Your OTP is: ${otp}`
@@ -173,7 +173,7 @@ app.post('/api/login', async (req, res) => {
       email: user.reg_email,
       name: user.reg_full_name
     };
-    const jwtSecret = process.env.JWT_SECRET || 'your_jwt_secret';
+    const jwtSecret = process.env.JWT_SECRET;
     const expiresIn = keepMeSignedIn ? '30d' : '1d'; // 30 days or 1 day
 
     const token = jwt.sign(payload, jwtSecret, { expiresIn });
@@ -217,7 +217,7 @@ const authenticateJWT = (req, res, next) => {
   if (!token) {
     return res.status(401).json({ message: 'Authentication token missing.' });
   }
-  const jwtSecret = process.env.JWT_SECRET || 'your_jwt_secret';
+  const jwtSecret = process.env.JWT_SECRET;
   jwt.verify(token, jwtSecret, (err, decoded) => {
     if (err) {
       return res.status(401).json({ message: 'Invalid token.' });
